@@ -107,7 +107,7 @@ def main(argv):
         mqttQueue = SimpleQueue()
         sysQueue = SimpleQueue()
 
-        # Start Telegram Bot Thread
+        # Start System Thread
         t2 = Sys(root_dir, sysQueue, mqttQueue)
         #Start Publisher Thread
         publish = MQTTPublisher(topic, broker, mqttQueue, sysQueue)
